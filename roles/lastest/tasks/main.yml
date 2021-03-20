@@ -1,0 +1,10 @@
+-
+  # name: debugging find
+  # debug:
+  # #   msg: "{{path_list}}"
+
+ name: getting last element per folder
+ set_fact:
+   latest_file: "{{ latest_file|default([])+[item]}}"
+ with_items: "{{ path_list}}"
+ when: "{{ item | dirname not in latest_file|default([])|map('dirname')}}"

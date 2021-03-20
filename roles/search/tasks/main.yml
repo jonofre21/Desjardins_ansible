@@ -1,0 +1,8 @@
+-
+  name: searching hprof files
+  find:
+    path: /home/osboxes/test
+    patterns: '*.hprof'
+    recurse: yes
+  register:
+    find_result

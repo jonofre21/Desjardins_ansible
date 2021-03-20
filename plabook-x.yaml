@@ -1,0 +1,19 @@
+-
+  name: searching and getting the latest 2 of each folder
+  hosts: targets
+  roles:
+    - search
+    - sorting
+    - lastest
+  tasks:
+
+    # -
+    #   name: getting 1 latest element of a folder
+    #   set_fact:
+    #     latest1: "{{latest1|default([])+[item]}}"
+    #   with_items: "{{ path_list }}"
+
+    -
+      name: debugging find
+      debug:
+       msg: "{{ latest_file }}"

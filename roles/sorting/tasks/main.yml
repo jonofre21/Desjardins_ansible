@@ -1,0 +1,4 @@
+    -
+      name: creating a list of paths
+      set_fact:
+        path_list: "{{ find_result.files|sort(attribute='mtime', reverse = True) |map (attribute='path')|list }}"
